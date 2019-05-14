@@ -1,0 +1,35 @@
+require: rubocop-rspec
+
+inherit_from:
+  - http://relaxed.ruby.style/rubocop.yml
+
+AllCops:
+  DisplayStyleGuide: true
+  DisplayCopNames: true
+  Exclude:
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+    - 'config/environments/*.rb'
+    - 'bin/*'
+    - 'lib/tasks/auto_annotate_models.rake'
+
+Rails:
+  Enabled: true
+
+Rails/Output:
+  Enabled: false
+
+Style/DateTime:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'Guardfile'
+    - 'vendor/bundle'
+
+Style/ClassAndModuleChildren:
+  Enabled: false

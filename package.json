@@ -1,5 +1,14 @@
 {
   "name": "theteachingproject",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "rubocop",
+      "pre-push": "rspec"
+    }
+  },
+  "devDependencies": {
+    "husky": "^1.3.1"
+  }
 }
