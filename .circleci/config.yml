@@ -19,6 +19,10 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: install bundler
+          command: gem install bundler:2.0.1
+
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "Gemfile.lock" }}
@@ -28,7 +32,6 @@ jobs:
           name: install dependencies
           command: |
             bundle install
-
       - save_cache:
           paths:
             - ./vendor/bundle
