@@ -51,3 +51,4 @@ jobs:
           name: run tests
           command: |
             bundle exec rspec --format progress \
+    
